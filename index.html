@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="&lt;model-viewer&gt; template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer
+      src="model/model-airpods.gltf"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      poster="poster.webp"
+      shadow-intensity="2"
+      exposure="0.55"
+      shadow-softness="0.92"
+    >
+      <button
+        class="Hotspot"
+        slot="hotspot-1"
+        data-position="3.9788445861717534m 10.22333923003384m -14.444690660084145m"
+        data-normal="0.291879779096408m 0.05332664371305223m -0.9549672578810927m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation" id="hotspot-1">
+          <h2>Active Noise Cancellation</h2>
+          <p>noise</p>
+        </div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="4.746929443880414m -3.070426730678008m -14.15105520679252m"
+        data-normal="0.29811142634206556m 0.004536011058403078m -0.9545202994635459m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation" id="hotspot-2">
+          2. Bluetooth Connect
+        </div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-3"
+        data-position="2.3259368312669535m -9.960498115605287m 17.548011608533407m"
+        data-normal="0.009863995593609226m -0.9308256301463846m -0.3653304639001725m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation" id="hotspot-3">3. Charging</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-4"
+        data-position="6.186096056160835m 11.190778789718136m 6.181611472166145m"
+        data-normal="0.7356942902579983m 0.09468664217680604m -0.670662620901942m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation" id="hotspot-4">
+          4. Call Quality
+        </div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-5"
+        data-position="1.135920636001888m 3.644922745839992m 21.115136863143622m"
+        data-normal="-0.3193685556322966m -0.0420937095564607m 0.9466952230201212m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation" id="hotspot-5">5.Touch</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+        <img src="img/ar_hand_prompt.png" />
+      </div>
+    </model-viewer>
+    <script src="./js/script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

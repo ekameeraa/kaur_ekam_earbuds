@@ -20,8 +20,7 @@ model-viewer {
 }
 
 .Hotspot {
-  /* background: #fff; */
-  background: url(../img/dot.svg) center no-repeat;
+  background: #fff;
   border-radius: 32px;
   border: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -44,7 +43,7 @@ model-viewer {
 }
 
 .Hotspot:focus {
-  border: 4px solid rgb(130, 209, 255);
+  border: 4px solid rgb(0, 128, 200);
   height: 32px;
   outline: none;
   width: 32px;
@@ -56,7 +55,6 @@ model-viewer {
 }
 
 .HotspotAnnotation {
-  visibility: hidden;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -72,18 +70,6 @@ model-viewer {
   position: absolute;
   top: 50%;
   width: max-content;
-  text-align: left;
-}
-
-.HotspotAnnotation p {
-  color: #333;
-  line-height: 22px;
-  font-weight: 300;
-}
-
-.HotspotAnnotation h2 {
-  font-size: 18px;
-  margin-bottom: 5px;
 }
 
 .Hotspot:not([data-visible]) > * {

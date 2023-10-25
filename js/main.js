@@ -1,18 +1,5 @@
 // Handles loading the events for <model-viewer>'s slotted progress bar
 const onProgress = (event) => {
-
-    const progressBar = event.target.querySelector('.progress-bar');
-    const updatingBar = event.target.querySelector('.update-bar');
-    updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-    if (event.detail.totalProgress === 1) {
-      progressBar.classList.add('hide');
-      event.target.removeEventListener('progress', onProgress);
-    } else {
-      progressBar.classList.remove('hide');
-    }
-  };
-  document.querySelector('model-viewer').addEventListener('progress', onProgress);
-
   const progressBar = event.target.querySelector(".progress-bar");
   const updatingBar = event.target.querySelector(".update-bar");
   updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
@@ -23,6 +10,18 @@ const onProgress = (event) => {
     progressBar.classList.remove("hide");
   }
 };
+document.querySelector("model-viewer").addEventListener("progress", onProgress);
+{
+  const progressBar = event.target.querySelector(".progress-bar");
+  const updatingBar = event.target.querySelector(".update-bar");
+  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+  if (event.detail.totalProgress === 1) {
+    progressBar.classList.add("hide");
+    event.target.removeEventListener("progress", onProgress);
+  } else {
+    progressBar.classList.remove("hide");
+  }
+}
 document.querySelector("model-viewer").addEventListener("progress", onProgress);
 
 // rough
@@ -65,4 +64,3 @@ document.querySelector("model-viewer").addEventListener("progress", onProgress);
 })();
 
 // In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
-

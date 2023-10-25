@@ -36,8 +36,8 @@ document.querySelector("model-viewer").addEventListener("progress", onProgress);
   }
 
   function hideInfo() {
-    //console.log(this.slot);
-    //console.log(`#${this.slot}`);
+    // console.log(this.slot);
+    // console.log(`#${this.slot}`);
     let selected = document.querySelector(`#${this.slot}`);
     gsap.to(selected, 1, { autoAlpha: 0 });
   }

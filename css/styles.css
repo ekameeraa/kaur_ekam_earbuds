@@ -72,6 +72,16 @@ model-viewer {
   width: max-content;
 }
 
+/* hover */
+/* .HotspotAnnotation:hover {
+  visibility: visible; 
+}
+
+.HotspotAnnotation:hover p,
+.HotspotAnnotation:hover h2 {
+  display: block;
+} */
+
 .Hotspot:not([data-visible]) > * {
   opacity: 0;
   pointer-events: none;
